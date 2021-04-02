@@ -1,0 +1,59 @@
+### Get all attendance
+GET http://localhost:8080/attendance
+
+### Create attendance - Christmas Eve Party / John Doe
+POST http://localhost:8080/attendance
+Content-Type: application/json
+
+{
+    "timeIn": "2021-12-24T10:30:00Z",
+    "timeOut": "2021-12-25T01:00:00Z",
+    "members": ["6062cca917fa334458164d47"],
+    "event": "6061f5af08e5025930d02be9"
+}
+
+### Create attendance - Christmas Eve Party / Jake Peralta and Charles Boyle
+POST http://localhost:8080/attendance
+Content-Type: application/json
+
+{
+    "timeIn": "2021-12-24T11:30:00Z",
+    "members": ["606320776f289b4d1046bab7", 
+                "6065e1888a6f121c44f5c8d2"],
+    "event": "6061f5af08e5025930d02be9"
+}
+
+### Create attendance - Christmas Eve Party /John Doe
+POST http://localhost:8080/attendance
+Content-Type: application/json
+
+{
+    "timeIn": "2021-12-25T00:45:00Z",
+    "members": ["6062cca917fa334458164d47"],
+    "event": "6061f5af08e5025930d02be9"
+}
+
+### Create attendance - New Year Eve Party / John Doe
+POST http://localhost:8080/attendance
+Content-Type: application/json
+
+{
+    "timeIn": "2021-12-24T10:30:00Z",
+    "timeOut": "2021-12-25T01:00:00Z",
+    "members": ["6062cca917fa334458164d47"],
+    "event": "6065e10fa6aaf71c60a7e98a"
+}
+
+### Update attendance - Christmas Eve Party / Jake Peralta
+PUT http://localhost:8080/attendance/6064c7c7e1dd784dfc5f8878
+Content-Type: application/json
+
+{
+    "timeIn": "2021-12-24T10:30:00Z",
+    "timeOut": "2021-12-25T01:00:00Z",
+    "members": ["606320776f289b4d1046bab7"],
+    "event": "6061f5af08e5025930d02be9"
+}
+
+### Delete attendance - Christmas Eve Party / John Doe
+DELETE http://localhost:8080/attendance/6064c7c7e1dd784dfc5f8878

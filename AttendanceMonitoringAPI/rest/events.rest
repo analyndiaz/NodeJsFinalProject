@@ -1,0 +1,51 @@
+### Get all events
+GET http://localhost:8080/events
+
+### Get event by Id
+GET http://localhost:8080/events/6065e10fa6aaf71c60a7e98a
+
+### Search Event by Event Name
+GET http://localhost:8080/events/search?eventname=Christmas+Eve+Party
+
+### Search Event by Event Name, Date Start and Date End
+GET http://localhost:8080/events/search?eventname=Christmas+Eve+Party&datestart=2021-12-24&dateend=2021-12-25
+
+### Create event - Christmas' Eve Party
+POST http://localhost:8080/events
+Content-Type: application/json
+
+{
+    "name": "Christmas Eve Party",
+    "type": "Party",
+    "startDateTime": "2021-12-24T10:00:00Z",
+    "endDateTime": "2021-12-25T01:30:00Z"
+}
+
+### Create event - New Year's Eve Party
+POST http://localhost:8080/events/
+Content-Type: application/json
+
+{
+    "name": "New Year Eve Party",
+    "type": "Party",
+   "startDateTime":  "2021-12-31T22:00:00Z",
+    "endDateTime": "2022-01-01T01:30:00Z"
+}
+
+### Update event - Christmas' Eve Party
+PUT http://localhost:8080/events/6061f5af08e5025930d02be9
+Content-Type: application/json
+
+{
+    "name": "Christmas Party",
+    "type": "Night Party",
+   "startDateTime":  "2021-12-24T22:00:00Z",
+    "endDateTime": "2021-12-25T01:30:00Z"
+}
+
+### Delete Christmas Eve Party
+DELETE http://localhost:8080/events/60631c53d478042340aa8825
+
+### Export event 
+GET http://localhost:8080/events/export?eventId=6065e10fa6aaf71c60a7e98a
+

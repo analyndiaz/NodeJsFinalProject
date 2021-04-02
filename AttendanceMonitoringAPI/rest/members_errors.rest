@@ -1,0 +1,38 @@
+### Create member - With No Name
+POST http://localhost:8080/members
+Content-Type: application/json
+
+{
+    "joinedDate": "2019-12-01T10:00:00Z",
+    "status": "Active"
+}
+
+### Create member - With No Status
+POST http://localhost:8080/members
+Content-Type: application/json
+
+{
+    "name": "Amy Santiago",
+    "joinedDate": "2019-12-01T10:00:00Z"
+}
+
+### Update member - With No Name
+PUT http://localhost:8080/members/6062cca917fa334458164d47
+Content-Type: application/json
+
+{
+    "joinedDate": "2019-12-01T10:00:00Z",
+    "status": "Active"
+}
+
+### Update member - With No Status
+PUT http://localhost:8080/members/6062cca917fa334458164d47
+Content-Type: application/json
+
+{
+    "name": "Amy Santiago",
+    "joinedDate": "2019-12-01T10:00:00Z"
+}
+
+### Delete member (with Event attendance)
+DELETE http://localhost:8080/members/606320776f289b4d1046bab7

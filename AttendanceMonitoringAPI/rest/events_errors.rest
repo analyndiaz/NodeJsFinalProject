@@ -1,0 +1,104 @@
+### Create event - Party with no Name
+POST http://localhost:8080/events
+Content-Type: application/json
+
+{
+    "type": "Party",
+    "startDateTime": "2021-12-24T10:00:00Z",
+    "endDateTime": "2021-12-25T01:30:00Z"
+}
+
+### Create event - Party with no Type
+POST http://localhost:8080/events
+Content-Type: application/json
+
+{
+    "name": "Christmas Eve Party",
+    "startDateTime": "2021-12-24T10:00:00Z",
+    "endDateTime": "2021-12-25T01:30:00Z"
+}
+
+### Create event - Party with no Start Date Time
+POST http://localhost:8080/events
+Content-Type: application/json
+
+{
+    "name": "Christmas Eve Party",
+    "type": "Party",
+    "endDateTime": "2021-12-25T01:30:00Z"
+}
+
+### Create event - Party with no End Date Time
+POST http://localhost:8080/events
+Content-Type: application/json
+
+{
+    "name": "Christmas Eve Party",
+    "type": "Party",
+    "startDateTime": "2021-12-24T10:00:00Z"
+}
+
+### Create event - Party with Start Date Time > End Date Time
+POST http://localhost:8080/events
+Content-Type: application/json
+
+{
+    "name": "Christmas Eve Party",
+    "type": "Party",
+    "startDateTime": "2021-12-26T10:00:00Z",
+    "endDateTime": "2021-12-25T01:30:00Z"
+}
+
+### Update event - Party with no Name
+PUT http://localhost:8080/events/6061f5af08e5025930d02be9
+Content-Type: application/json
+
+{
+    "type": "Party",
+    "startDateTime": "2021-12-24T10:00:00Z",
+    "endDateTime": "2021-12-25T01:30:00Z"
+}
+
+### Update event - Party with no Type
+PUT http://localhost:8080/events/6061f5af08e5025930d02be9
+Content-Type: application/json
+
+{
+    "name": "Christmas Eve Party",
+    "startDateTime": "2021-12-24T10:00:00Z",
+    "endDateTime": "2021-12-25T01:30:00Z"
+}
+
+### Update event - Party with no Start Date Time
+PUT http://localhost:8080/events/6061f5af08e5025930d02be9
+Content-Type: application/json
+
+{
+    "name": "Christmas Eve Party",
+    "type": "Party",
+    "endDateTime": "2021-12-25T01:30:00Z"
+}
+
+### Update event - Party with no End Date Time
+PUT http://localhost:8080/events/6061f5af08e5025930d02be9
+Content-Type: application/json
+
+{
+    "name": "Christmas Eve Party",
+    "type": "Party",
+    "startDateTime": "2021-12-24T10:00:00Z"
+}
+
+### Update event - Party with Start Date Time > End Date Time
+PUT http://localhost:8080/events/6061f5af08e5025930d02be9
+Content-Type: application/json
+
+{
+    "name": "Christmas Eve Party",
+    "type": "Party",
+    "startDateTime": "2021-12-26T10:00:00Z",
+    "endDateTime": "2021-12-25T01:30:00Z"
+}
+
+### Delete Event with Member Attendance
+DELETE http://localhost:8080/events/6061f5af08e5025930d02be9

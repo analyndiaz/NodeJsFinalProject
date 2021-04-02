@@ -1,0 +1,33 @@
+### Update attendance - Christmas Eve Party / Rosa Diaz and Jake Peralta (error - Rosa Diaz is inactive)
+PUT http://localhost:8080/attendance/6064c071fe5ffe18b4ccf34a
+Content-Type: application/json
+
+{
+    "timeIn": "2021-12-24T10:30:00Z",
+    "timeOut": "2021-12-25T01:00:00Z",
+    "members": ["6064b93512e4861798bd72cc",
+                "606320776f289b4d1046bab7"],
+    "event": "6061f5af08e5025930d02be9"
+}
+
+### Create attendance - Christmas Eve Party / Non-existing member (error - non existing member)
+POST http://localhost:8080/attendance
+Content-Type: application/json
+
+{
+    "timeIn": "2021-12-24T10:30:00Z",
+    "timeOut": "2021-12-25T01:00:00Z",
+    "members": ["6062cca917fa334458164d54"],
+    "event": "6061f5af08e5025930d02be9"
+}
+
+### Create attendance - Non-existing event / Jake Peralta (error - non existing event)
+POST http://localhost:8080/attendance
+Content-Type: application/json
+
+{
+    "timeIn": "2021-12-24T10:30:00Z",
+    "timeOut": "2021-12-25T01:00:00Z",
+    "members": ["606320776f289b4d1046bab7"],
+    "event": "6061f5af08e5025930d02b10"
+}

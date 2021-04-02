@@ -1,0 +1,5 @@
+{
+  "mongoURI": "mongodb+srv://test-user:Passw0rd123abc@covidcluster.qyze6.azure.mongodb.net/attendance_monitoring?retryWrites=true&w=majority",
+  "loggerDir": "C:\\ProgramData\\AttendanceMonitoringApi",
+  "logFilename": "AttendanceMonitoringLogs"
+}

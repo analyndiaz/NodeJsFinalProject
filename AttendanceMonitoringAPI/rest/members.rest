@@ -1,0 +1,66 @@
+### Get all members
+GET http://localhost:8080/members
+
+### Get member by Id
+GET http://localhost:8080/members/6062cca917fa334458164d47
+
+### Search member by Name
+GET http://localhost:8080/members/search?name=John+Doe
+
+### Search member by Status
+GET http://localhost:8080/members/search?status=Active
+
+### Search member by Name and Status
+GET http://localhost:8080/members/search?name=John+Doe&status=Active
+
+### Create member - John Doe
+POST http://localhost:8080/members
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "joinedDate": "2019-12-01T10:00:00Z",
+    "status": "Active"
+}
+
+### Create member - Jake Peralta
+POST http://localhost:8080/members
+Content-Type: application/json
+
+{
+    "name": "Jake Peralta",
+    "joinedDate": "2019-12-01T10:00:00Z",
+    "status": "Active"
+}
+
+### Create member - Rosa Diaz
+POST http://localhost:8080/members
+Content-Type: application/json
+
+{
+    "name": "Rosa Diaz",
+    "joinedDate": "2019-01-01T10:00:00Z",
+    "status": "Active"
+}
+
+### Create member - Charles Boyle
+POST http://localhost:8080/members
+Content-Type: application/json
+
+{
+    "name": "Charles Boyle",
+    "status": "Active"
+}
+
+### Update member - Rosa Diaz
+PUT http://localhost:8080/members/6064b93512e4861798bd72cc
+Content-Type: application/json
+
+{
+    "name": "Rosa Diaz",
+    "joinedDate": "2019-02-01T10:00:00Z",
+    "status": "In-active"
+}
+
+### Delete member
+DELETE http://localhost:8080/members/6065dfe30a17ef3e886d3982
