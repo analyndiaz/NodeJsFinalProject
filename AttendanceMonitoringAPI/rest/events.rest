@@ -7,7 +7,10 @@ GET http://localhost:8080/events/6065e10fa6aaf71c60a7e98a
 ### Search Event by Event Name
 GET http://localhost:8080/events/search?eventname=Christmas+Eve+Party
 
-### Search Event by Event Name, Date Start and Date End
+### Search Event by End Date
+GET http://localhost:8080/events/search?dateend=2021-12-25
+
+### Search Event by Event Name, Start and End Dates
 GET http://localhost:8080/events/search?eventname=Christmas+Eve+Party&datestart=2021-12-24&dateend=2021-12-25
 
 ### Create event - Christmas' Eve Party
